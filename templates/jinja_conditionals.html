@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jinja_conditionals</title>
+</head>
+<body>
+    <center>
+        <h1>JINJA CONDITIONAL STATEMENTS</h1>
+    </center>
+    <center>
+
+        <h1>if condition</h1>
+        {% if a > 9 %}
+            <h2>{{a}}(a) is greater than 9</h2>
+        {% endif %}
+    
+        <h1>if-else conditions</h1>
+        {% if a > b %}
+            <h2>{{a}}(a) is greater than {{b}}(b)</h2>
+        {% else %}
+            <h2>{{b}}(b) is greater than {{a}}(a)</h2>
+        {% endif %}
+    
+        <h1>if-elif conditions</h1>
+        {% if a > b and a > c %}
+            <h2>{{a}}(a) is maximum</h2>
+        {% elif b > c %}
+            <h2>{{b}}(b) is maximum</h2>
+        {% else %}
+            <h2>{{c}}(c) is maximim</h2>
+        {% endif %}
+        
+        <h1>nested if conditions</h1>
+        {% if a > b %}
+            {% if a > c %}
+                <h2>{{a}}(a) is maximum</h2>
+            {% else %}
+                <h2>{{c}}(c) is maximum</h2>
+            {% endif %}
+        {% else %}
+            {% if b > c %}
+                <h2>{{b}}(b) is maximum</h2>
+            {% else %}
+                <h2>{{c}}(c) is maximum</h2>
+            {% endif %}
+        {% endif %}
+    </center>
+</body>
+</html>
